@@ -1,0 +1,14 @@
+CC = gcc
+CFLAGS = -Wall
+TARGET = server_0368
+
+all: $(TARGET)
+
+$(TARGET): $(TARGET).c
+	$(CC) $(CFLAGS) -o $(TARGET) $(TARGET).c
+
+clean:
+	rm -f $(TARGET)
+
+run: $(TARGET)
+	./$(TARGET)
